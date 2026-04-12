@@ -37,3 +37,23 @@ Route::prefix('/')->name('front.')->group(function () {
     Route::get('/testimonial', function () {return view('front.testimonial');})->name('testimonial');
 
 });
+
+
+Route::prefix('/admin')->name('admin.')->group(function () {
+    Route::get('', function () {return view('admin.index');})->name('index');
+
+    // Route::get('/about', function () {return view('front.about');})->name('about');
+
+    // Route::get('/contact', function () {return view('front.contact');})->name('contact');
+
+    // Route::get('/404', function () {return view('front.404');})->name('404');
+
+    // Route::get('/project', function () {return view('front.project');})->name('project');
+
+    // Route::get('/service', function () {return view('front.service');})->name('service');
+
+    // Route::get('/team', function () {return view('front.team');})->name('team');
+
+    // Route::get('/testimonial', function () {return view('front.testimonial');})->name('testimonial');
+
+});

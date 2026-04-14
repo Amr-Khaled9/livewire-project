@@ -55,13 +55,12 @@ Route::prefix('/')->name('front.')->group(function () {
 
 
 Route::prefix('/admin')->name('admin.')->group(function () {
-    // 🔓 للـ guest فقط
     Route::middleware('guest:admin')->group(function () {
         Route::get('/login', fn() => view('admin.login'))->name('login');
     });
 
-    // 🔐 للـ admin فقط
     Route::middleware('admin')->group(function () {
         Route::get('/', fn() => view('admin.index'))->name('index');
+        Route::get('/settings', fn() => view('admin.settings.index'))->name('settings');
     });
 });

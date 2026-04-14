@@ -2,9 +2,18 @@
 <html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
     data-assets-path="{{asset('admin-assets')}}/" data-template="vertical-menu-template-free">
 
+
 @include('admin.partials.head')
+@section('title')
+Admin Panel
+@endsection
 
 <body>
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -44,7 +53,7 @@
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
+    @include('sweetalert::alert')
     @include('admin.partials.scripts')
     @yield('scripts')
 

@@ -9,12 +9,8 @@ Admin Panel
 @endsection
 
 <body>
-    @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-    @endif
     <!-- Layout wrapper -->
+
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
             <!-- Menu -->
@@ -27,35 +23,44 @@ Admin Panel
 
                 @include('admin.partials.navbar')
 
+                @if(session('success'))
+                <div class="alert alert-primary">
+                    {{ session('success') }}
+                </div>
+                @endif
+
                 <!-- / Navbar -->
 
                 <!-- Content wrapper -->
-                <div class="content-wrapper">
-                    <!-- Content -->
+                {{-- <div class="card"> --}}
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                    {{-- <div class="content-wrapper"> --}}
+                        <!-- Content -->
 
-                    @yield('content')
-                    <!-- / Content -->
+                        @yield('content')
+                        <!-- / Content -->
 
-                    <!-- Footer -->
-                    @include('admin.partials.footer')
+                        <!-- Footer -->
+                        @include('admin.partials.footer')
 
-                    @yield('footer')
-                    <!-- / Footer -->
+                        @yield('footer')
+                        <!-- / Footer -->
 
-                    <div class="content-backdrop fade"></div>
+                        <div class="content-backdrop fade"></div>
+                    </div>
+                    </div>
+                    <!-- Content wrapper -->
                 </div>
-                <!-- Content wrapper -->
+                <!-- / Layout page -->
             </div>
-            <!-- / Layout page -->
-        </div>
 
-        <!-- Overlay -->
-        <div class="layout-overlay layout-menu-toggle"></div>
-    </div>
-    <!-- / Layout wrapper -->
-    @include('sweetalert::alert')
-    @include('admin.partials.scripts')
-    @yield('scripts')
+            <!-- Overlay -->
+            <div class="layout-overlay layout-menu-toggle"></div>
+        </div>
+        <!-- / Layout wrapper -->
+        @include('sweetalert::alert')
+        @include('admin.partials.scripts')
+        @yield('scripts')
 
 </body>
 

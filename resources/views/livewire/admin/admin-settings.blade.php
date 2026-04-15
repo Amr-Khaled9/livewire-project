@@ -1,9 +1,9 @@
 <div class="card">
     @if(session('success'))
-    <div class="alert alert-primary" id="success-alert" >
+    <div class="alert alert-primary" id="success-alert">
         {{ session('success') }}
     </div>
-@endif
+    @endif
     <div class="card-header">
         <h4>Settings</h4>
     </div>

@@ -43,3 +43,21 @@
 
 });
 </script>
+
+
+<script>
+    document.addEventListener('livewire:init', () => {
+
+    Livewire.on('createToggle', () => {
+
+        let modal = document.getElementById('create');
+        let modalInstance = bootstrap.Modal.getInstance(modal);
+
+        if (modalInstance) {
+            modalInstance.hide();
+        }
+
+    });
+
+});
+</script>

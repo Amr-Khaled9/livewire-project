@@ -61,3 +61,66 @@
 
 });
 </script>
+<script>
+    document.addEventListener('livewire:init', () => {
+
+    Livewire.on('editToggle', () => {
+
+        let modalEl = document.getElementById('edit');
+
+        let modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+        modal.show();
+
+    });
+
+});
+</script>
+
+<script>
+    document.addEventListener('livewire:init', () => {
+
+    Livewire.on('deleteToggle', () => {
+
+        let modalEl = document.getElementById('delete');
+
+        let modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+        modal.show();
+
+    });
+
+});
+</script>
+
+<script>
+    document.addEventListener('livewire:init', () => {
+
+    Livewire.on('beforeDeleteToggle', () => {
+
+        let modal = document.getElementById('delete');
+        let modalInstance = bootstrap.Modal.getInstance(modal);
+
+        if (modalInstance) {
+            modalInstance.hide();
+        }
+
+    });
+
+});
+</script>
+
+
+<script>
+    document.addEventListener('livewire:init', () => {
+
+    Livewire.on('showToggle', () => {
+
+        let modalEl = document.getElementById('show');
+
+        let modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+        modal.show();
+
+    });
+
+});
+</script>
+

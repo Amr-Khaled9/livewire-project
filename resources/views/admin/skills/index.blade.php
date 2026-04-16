@@ -9,5 +9,6 @@ Skills
 @endsection
 
 @section('content')
+
 @livewire('admin.admin-skills')
 @endsection

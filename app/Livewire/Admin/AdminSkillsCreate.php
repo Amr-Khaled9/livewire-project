@@ -7,28 +7,23 @@ use Livewire\Component;
 
 class AdminSkillsCreate extends Component
 {
-    public $skill;
-    public function mount()
-    {
-        $this->skill = new Skill();
-    }
+    public $name, $progress;
 
     public function rules()
     {
         return [
-            'skill.name' => 'required|string|min:3|max:255',
-            'skill.progress' => 'required|numeric|min:0|max:100',
+            'name' => 'required|string|min:3|max:255',
+            'progress' => 'required|numeric|min:0|max:100',
         ];
     }
 
     public function save()
     {
-        $this->validate();
+        $data = $this->validate();
 
-        $this->skill->save();
+        Skill::create($data);
         session()->flash('success', 'Skill Saved Successfully');
-
-        $this->reset(['skill.name', 'skill.progress']);
+        $this->reset(['name', 'progress']);
 
         $this->dispatch('createToggle');
         $this->dispatch('refreshdata')->to(AdminSkills::class);

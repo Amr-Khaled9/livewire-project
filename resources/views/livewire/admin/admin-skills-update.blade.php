@@ -1,17 +1,18 @@
 <div>
-    @if(session('success'))
-    <div class="alert alert-primary" id="success-alert">
-        {{ session('success') }}
-    </div>
-    @endif
+
     <!-- Modal -->
-    <div class="modal fade" id="create" tabindex="-1" aria-hidden="true" wire:ignore.self>
+    <div class="modal fade" id="edit" tabindex="-1" aria-hidden="true" wire:ignore.self>
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Add New Skill</h5>
+                    <h5 class="modal-title" id="exampleModalLabel1">Edit Skill</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                @if(session('success'))
+                <div class="alert alert-primary" id="success-alert">
+                    {{ session('success') }}
+                </div>
+                @endif
                 <form wire:submit.prevent="save">
 
                     <div class="modal-body">
@@ -19,7 +20,8 @@
                         <!-- Name -->
                         <div class="mb-3">
                             <label class="form-label">Name</label>
-                            <input wire:model.defer="name" type="text" class="form-control" placeholder="Name">
+                            <input wire:model.defer="skill.name" type="text" class="form-control" placeholder="Name"
+                                value="">
 
                             @error('skill.name')
                             <small class="text-danger">{{ $message }}</small>
@@ -29,8 +31,8 @@
                         <!-- Progress -->
                         <div class="mb-3">
                             <label class="form-label">Progress</label>
-                            <input wire:model.defer="progress" type="number" class="form-control"
-                                placeholder="Progress">
+                            <input wire:model.defer="skill.progress" type="number" class="form-control"
+                                placeholder="Progress" value="">
 
                             @error('skill.progress')
                             <small class="text-danger">{{ $message }}</small>

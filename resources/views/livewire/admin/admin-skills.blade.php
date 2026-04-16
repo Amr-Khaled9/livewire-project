@@ -1,8 +1,8 @@
 <div class="card">
+
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="mb-3">
             <div class="mb-3">
-
                 <h5 class=" fw-semibold mb-2">Skills</h5>
                 <div class="col-lg-4 col-md-6">
                     <div class="mt-3">
@@ -21,7 +21,6 @@
                     <div class="mb-3">
                         <input type="text" class="form-control w-25" placeholder="Search" wire:model.live='search'>
                     </div>
-
                     <div class="table-responsive text-nowrap">
                         @if (count($data) > 0)
                         <table class="table">
@@ -42,17 +41,17 @@
                                     <td>
                                         <div class="d-flex align-items-center gap-2">
 
-                                            <a href="#" class="btn btn-sm btn-outline-primary"
+                                            <a class="btn btn-sm btn-outline-primary" id="#edit"
                                                 wire:click.prevent="$dispatch('skillUpdate', { id: {{ $record->id }} })">
                                                 <i class="bx bx-edit-alt"></i>
                                             </a>
-
-                                            <a href="#" class="btn btn-sm btn-outline-danger"
+                                            @livewire('admin.admin-skills-update')
+                                            <a class="btn btn-sm btn-outline-danger" id="#delete"
                                                 wire:click.prevent="$dispatch('skillDelete', { id: {{ $record->id }} })">
                                                 <i class="bx bx-trash"></i>
                                             </a>
 
-                                            <a href="#" class="btn btn-sm btn-outline-info"
+                                            <a href="#" class="btn btn-sm btn-outline-info" id="#show"
                                                 wire:click.prevent="$dispatch('skillShow', { id: {{ $record->id }} })">
                                                 <i class="bx bx-show"></i>
                                             </a>
@@ -73,6 +72,9 @@
             </div>
 
         </div>
+        @livewire('admin.admin-skills-delete')
+        @livewire('admin.admin-skills-show')
+
 
     </div>
 </div>

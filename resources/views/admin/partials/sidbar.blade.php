@@ -75,6 +75,13 @@
                 <div data-i18n="Analytics">Settings</div>
             </a>
         </li>
+                <li class="menu-item @yield('subscribers-active')">
+            <a href="{{ route('admin.subscribers') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-group"></i>
+                <div data-i18n="Analytics">Subscribers</div>
+            </a>
+        </li>
+
 
         <!-- Layouts -->
         <li class="menu-item">

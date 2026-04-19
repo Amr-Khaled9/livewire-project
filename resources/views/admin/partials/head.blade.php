@@ -19,7 +19,8 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="{{asset('admin-assets')}}/vendor/fonts/boxicons.css" />
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Core CSS -->
     <link rel="stylesheet" href="{{asset('admin-assets')}}/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="{{asset('admin-assets')}}/vendor/css/theme-default.css"
@@ -40,5 +41,5 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{asset('admin-assets')}}/js/config.js"></script>
 
-    
+
 </head>

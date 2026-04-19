@@ -75,10 +75,16 @@
                 <div data-i18n="Analytics">Settings</div>
             </a>
         </li>
-                <li class="menu-item @yield('subscribers-active')">
+        <li class="menu-item @yield('subscribers-active')">
             <a href="{{ route('admin.subscribers') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-group"></i>
                 <div data-i18n="Analytics">Subscribers</div>
+            </a>
+        </li>
+        <li class="menu-item @yield('counters-active')">
+            <a href="{{ route('admin.counters') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-bar-chart-alt-2"></i>
+                <div data-i18n="Analytics">Counters</div>
             </a>
         </li>
 

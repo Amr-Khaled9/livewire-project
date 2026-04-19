@@ -27,7 +27,7 @@ class AdminCountersCreate extends Component
         session()->flash('success', 'Counter Saved Successfully');
         $this->reset(['name', 'count', 'icon']);
         $this->dispatch('createToggle');
-        $this->dispatch('refreshdata')->to(AdminCounters::class);
+        $this->dispatch('refreshdata')->to(AdminCountersData::class);
         $this->dispatch('show-success');
     }
     public function render()

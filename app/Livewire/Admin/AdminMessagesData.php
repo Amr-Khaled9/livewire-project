@@ -2,11 +2,11 @@
 
 namespace App\Livewire\Admin;
 
-use App\Models\Counter;
+use App\Models\Message;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class AdminCountersData extends Component
+class AdminMessagesData extends Component
 {
     use WithPagination;
     public $search;
@@ -17,8 +17,8 @@ class AdminCountersData extends Component
     }
     public function render()
     {
-        return view('livewire.admin.admin-counters-data', [
-            'data' => Counter::where('name', 'like', '%' . $this->search . '%')->paginate(10)
+        return view('livewire.admin.admin-messages-data', [
+            'data' => Message::where('name', 'like', '%' . $this->search . '%')->paginate(10)
         ]);
     }
 }

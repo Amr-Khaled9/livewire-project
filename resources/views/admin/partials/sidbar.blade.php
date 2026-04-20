@@ -86,11 +86,17 @@
                 <i class="menu-icon tf-icons bx bx-bar-chart-alt-2"></i>
                 <div data-i18n="Analytics">Counters</div>
             </a>
-        </li> 
+        </li>
         <li class="menu-item @yield('services-active')">
             <a href="{{ route('admin.services') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-wrench"></i>
                 <div data-i18n="Analytics">Services</div>
+            </a>
+        </li>
+        <li class="menu-item @yield('messages-active')">
+            <a href="{{ route('admin.messages') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-message"></i>
+                <div data-i18n="Analytics">Messages</div>
             </a>
         </li>
 

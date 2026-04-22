@@ -1,0 +1,1 @@
+<x-delete-model title="Delete Counter"></x-delete-model>

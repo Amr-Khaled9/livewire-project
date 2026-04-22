@@ -67,5 +67,6 @@ Route::prefix('/admin')->name('admin.')->group(function () {
         Route::get('/counters', fn() => view('admin.counters.index'))->name('counters');
         Route::get('/services', fn() => view('admin.services.index'))->name('services');
         Route::get('/messages', fn() => view('admin.messages.index'))->name('messages');
+        Route::get('/categories', fn() => view('admin.categories.index'))->name('categories');
     });
 });

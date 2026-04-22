@@ -99,6 +99,12 @@
                 <div data-i18n="Analytics">Messages</div>
             </a>
         </li>
+        <li class="menu-item @yield('categories-active')">
+            <a href="{{ route('admin.categories') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-category"></i>
+                <div data-i18n="Analytics">Categories</div>
+            </a>
+        </li>
 
         <!-- Layouts -->
         <li class="menu-item">

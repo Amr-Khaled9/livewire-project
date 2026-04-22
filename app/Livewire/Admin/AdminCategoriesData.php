@@ -2,11 +2,11 @@
 
 namespace App\Livewire\Admin;
 
-use App\Models\Message;
+use App\Models\Category;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class AdminMessagesData extends Component
+class AdminCategoriesData extends Component
 {
     use WithPagination;
     public $search;
@@ -17,10 +17,8 @@ class AdminMessagesData extends Component
     }
     public function render()
     {
-        return view('livewire.admin.admin-messages-data', [
-            'data' => Message::where('name', 'like', '%' . $this->search . '%')
-                ->latest()
-                ->paginate(10)
+        return view('livewire.admin.admin-categories-data', [
+            'data' => Category::where('name', 'like', '%' . $this->search . '%')->paginate(10)
         ]);
     }
 }

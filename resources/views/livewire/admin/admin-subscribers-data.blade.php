@@ -1,5 +1,5 @@
 <div class="mb-3">
-                @livewire('admin.admin-subscribers-delete')
+    @livewire('admin.admin-subscribers-delete')
 
     <br>
     <div>
@@ -41,6 +41,6 @@
             <span class="text-danger">No results found</span>
             @endif
         </div>
- 
+
     </div>
 </div>

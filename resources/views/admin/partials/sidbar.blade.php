@@ -105,6 +105,12 @@
                 <div data-i18n="Analytics">Categories</div>
             </a>
         </li>
+        <li class="menu-item @yield('projects-active')">
+            <a href="{{ route('admin.projects') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-briefcase"></i>
+                <div data-i18n="Analytics">Projects</div>
+            </a>
+        </li>
 
         <!-- Layouts -->
         <li class="menu-item">

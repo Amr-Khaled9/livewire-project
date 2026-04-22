@@ -68,5 +68,6 @@ Route::prefix('/admin')->name('admin.')->group(function () {
         Route::get('/services', fn() => view('admin.services.index'))->name('services');
         Route::get('/messages', fn() => view('admin.messages.index'))->name('messages');
         Route::get('/categories', fn() => view('admin.categories.index'))->name('categories');
+        Route::get('/projects', fn() => view('admin.projects.index'))->name('projects');
     });
 });
